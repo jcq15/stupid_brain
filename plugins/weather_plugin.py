@@ -10,6 +10,7 @@ class WeatherPlugin(SuperPlugin):
         self.key = password.weather_key
         self.loc_code = 101010200  # 海淀
         self.base_url = 'https://devapi.qweather.com/v7/weather/'
+        self.name = '每日天气'
 
     # 次日天气
     @SuperPlugin.sender
