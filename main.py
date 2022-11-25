@@ -36,7 +36,7 @@ scheduler.add_job(question.question, 'interval', days=1, start_date='2022-11-13 
 scheduler.add_job(weather.nextday, 'interval', days=1, start_date='2022-11-13 23:01:00')
 scheduler.add_job(healthy.lunch, 'interval', days=1, start_date='2022-11-13 11:28:00')
 scheduler.add_job(healthy.dinner, 'interval', days=1, start_date='2022-11-13 17:28:00')
-scheduler.add_job(healthy.sleep_weekday, 'cron', day_of_week='0-4', hour=22, minute=58)
+scheduler.add_job(healthy.sleep_weekday, 'cron', day_of_week='0-3,6', hour=23, minute=28)
 scheduler.add_job(healthy.sleep_weekend, 'cron', day_of_week='5,6', hour=0, minute=28)
 
 scheduler.start()
