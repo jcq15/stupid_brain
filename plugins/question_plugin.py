@@ -16,6 +16,6 @@ class QuestionPlugin(SuperPlugin):
         with open(self.filepath, 'r', encoding='utf-8') as f:
             data = json.load(f)
         today = str(datetime.date.today())
-        text = "【每日一题】" + data[today]
-        print(text)
-        self.bot.send(text)
+        if today in data:
+            text = "【每日一题】" + data[today]
+            self.bot.send(text)
